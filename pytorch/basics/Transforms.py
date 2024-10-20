@@ -15,6 +15,7 @@ ds = datasets.FashionMNIST(
 train_dataloader = DataLoader(ds, batch_size=64, shuffle=True)
 train_features, train_labels = next(iter(train_dataloader))
 img = train_features[0].squeeze()
+print(img)
 label = train_labels[0]
 plt.imshow(img, cmap="gray")
 plt.show()
